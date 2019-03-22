@@ -1,11 +1,20 @@
-function uniqueInOrder(sequence) {
+function uniqueInOrder(iterable) {
   let seq = "";
-  let numbers = false;
-  if (Array.isArray(sequence)) {
-    numbers = true;
-    seq = sequence.map(c => (!isNaN(c) ? String(c) : c));
+  let isNumberArray = false;
+  if (iterable === undefined || iterable.length === 0) {
+    return [];
+  }
+  if (Array.isArray(iterable)) {
+    seq = iterable.map(c => {
+      if (!isNaN(c)) {
+        isNumberArray = true;
+        return String(c);
+      } else {
+        return c;
+      }
+    });
   } else {
-    seq = sequence.split("");
+    seq = iterable.split("");
   }
   let str = seq.reduce((acc, current) => {
     if (acc.split("")[acc.length - 1] === current) {
@@ -15,7 +24,10 @@ function uniqueInOrder(sequence) {
     return acc;
   });
   const strArr = str.split("");
-  return numbers ? strArr.map(Number) : strArr;
+  if (isNumberArray) {
+    return strArr.map(Number);
+  }
+  return strArr;
 }
 
 module.exports = uniqueInOrder;
