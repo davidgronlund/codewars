@@ -1,4 +1,4 @@
-const score = require("./score");
+const score = require("../score");
 
 it("should return correct score", () => {
   expect(score(["2:1", "1:1", "1:2"])).toEqual(4);

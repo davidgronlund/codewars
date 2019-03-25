@@ -1,4 +1,4 @@
-const songDecoder = require("./songdecoder");
+const songDecoder = require("../songdecoder");
 
 it("return correct song", () => {
   expect(songDecoder("AWUBBWUBC")).toEqual("A B C");

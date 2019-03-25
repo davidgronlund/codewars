@@ -1,4 +1,4 @@
-const primeGap = require("./primegap");
+const primeGap = require("../primegap");
 
 it("given a gap of 2 return the first valid gap", () => {
   expect(primeGap(2, 1, 10)).toEqual([3, 5]);

@@ -1,4 +1,4 @@
-const persistence = require("./persistence");
+const persistence = require("../persistence");
 
 it("return number of times to get to single digit", () => {
   expect(persistence(39)).toEqual(3);

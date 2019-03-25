@@ -1,4 +1,4 @@
-const uniqueInOrder = require("./uniqueinorder");
+const uniqueInOrder = require("../uniqueinorder");
 
 test("return no duplicate characters", () => {
   expect(uniqueInOrder("AAAABBBCCDAABBB")).toEqual([

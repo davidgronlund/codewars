@@ -1,4 +1,4 @@
-const deleteNth = require("./deleteNth");
+const deleteNth = require("../deleteNth");
 
 it("return correct photos", () => {
   expect(deleteNth([20, 37, 20, 21], 1)).toEqual([20, 37, 21]);
